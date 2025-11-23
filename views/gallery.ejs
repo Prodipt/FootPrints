@@ -1,0 +1,27 @@
+<section class="gallery">
+    <h1>Memories</h1>
+
+    <div class="gallery-grid">
+        <% media.forEach(item => { %>
+
+            <% if(item.type === "image"){ %>
+                <div class="gallery-item">
+                    <img src="/img/<%= item.file %>" alt="Travel Photo">
+                </div>
+            <% } %>
+
+            <% if(item.type === "video"){ %>
+                <div class="gallery-item">
+                    <video autoplay 
+                        muted 
+                        loop 
+                        playsinline
+                        >
+                        <source src="/videos/<%= item.file %>" type="video/mp4">
+                    </video>
+                </div>
+            <% } %>
+
+        <% }) %>
+    </div>
+</section>

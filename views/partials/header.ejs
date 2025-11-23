@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<header class="header">
+    <a href="/" class="header__logo">Footprint
+        <i class="fa-solid fa-shoe-prints"></i>
+    </a>
+
+    <nav class="header__nav">
+        <ul>
+            <li>
+                <a href="/" class="<%= isActiveRoute('/', currentRoute) %>">Home</a>
+            </li>
+            <li>
+                <a href="/about" class="<%= isActiveRoute('/about', currentRoute) %>">About</a>
+            </li>
+            <li>
+                <a href="/gallery" class="<%= isActiveRoute('/gallery', currentRoute) %>">Gallery</a>
+            </li>
+            <li>
+                <a href="/admin" class="<%= isActiveRoute('/admin', currentRoute) %>">Admin</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="header__button">
+        <button class="searchBtn" aria-expanded="false">
+            Search
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+    </div>
+</header>
